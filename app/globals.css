@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #102239;
+  --ivory: #f7f3ed;
+  --cream: #e9ddd0;
+  --text: #17263a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--navy);
+  color: white;
+}
+
+.font-serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.nav-link {
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 1px;
+  background: var(--navy);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  opacity: 0.65;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.25s ease;
+}
+
+.icon-button:hover {
+  opacity: 0.55;
+}
+
+.outline-button {
+  display: inline-flex;
+  border: 1px solid rgba(23, 38, 58, 0.45);
+  padding: 12px 28px;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  transition: all 0.3s ease;
+}
+
+.outline-button:hover {
+  background: #102239;
+  border-color: #102239;
+  color: white;
+}
+
+img {
+  display: block;
+}
