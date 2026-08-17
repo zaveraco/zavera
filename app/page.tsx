@@ -6,15 +6,15 @@ import Navbar from "../components/Navbar";
 
 const heroSlides = [
   {
-    image: "/images/products/nerea-porcelain/FTO09606.jpg",
+    image: "/images/products/nerea-porcelain/FTO09606.JPG",
     color: "PORCELAIN",
   },
   {
-    image: "/images/products/nerea-truffle/FTO09640.jpg",
+    image: "/images/products/nerea-truffle/FTO09640.JPG",
     color: "TRUFFLE",
   },
   {
-    image: "/images/products/nerea-powder-blue/FTO09686.jpg",
+    image: "/images/products/nerea-powder-blue/FTO09686.JPG",
     color: "POWDER BLUE",
   },
 ];
@@ -23,17 +23,17 @@ const collections = [
   {
     name: "Neréa Blouse",
     color: "Porcelain",
-    image: "/images/products/nerea-porcelain/FTO09606.jpg",
+    image: "/images/products/nerea-porcelain/FTO09606.JPG",
   },
   {
     name: "Neréa Blouse",
     color: "Powder Blue",
-    image: "/images/products/nerea-powder-blue/FTO09686.jpg",
+    image: "/images/products/nerea-powder-blue/FTO09686.JPG",
   },
   {
     name: "Neréa Blouse",
     color: "Truffle",
-    image: "/images/products/nerea-truffle/FTO09640.jpg",
+    image: "/images/products/nerea-truffle/FTO09640.JPG",
   },
 ];
 
