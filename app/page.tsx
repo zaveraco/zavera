@@ -6,15 +6,15 @@ import Navbar from "../components/Navbar";
 
 const heroSlides = [
   {
-    image: "/images/products/nerea-porcelain/FTO09606.JPG",
+    image: "/images/products/nerea-porcelain/FTO09606.jpg",
     color: "PORCELAIN",
   },
   {
-    image: "/images/products/nerea-truffle/FTO09640.JPG",
+    image: "/images/products/nerea-truffle/FTO09640.jpg",
     color: "TRUFFLE",
   },
   {
-    image: "/images/products/nerea-powder-blue/FTO09686.JPG",
+    image: "/images/products/nerea-powder-blue/FTO09686.jpg",
     color: "POWDER BLUE",
   },
 ];
@@ -23,17 +23,17 @@ const collections = [
   {
     name: "Neréa Blouse",
     color: "Porcelain",
-    image: "/images/products/nerea-porcelain/FTO09606.JPG",
+    image: "/images/products/nerea-porcelain/FTO09606.jpg",
   },
   {
     name: "Neréa Blouse",
     color: "Powder Blue",
-    image: "/images/products/nerea-powder-blue/FTO09686.JPG",
+    image: "/images/products/nerea-powder-blue/FTO09686.jpg",
   },
   {
     name: "Neréa Blouse",
     color: "Truffle",
-    image: "/images/products/nerea-truffle/FTO09640.JPG",
+    image: "/images/products/nerea-truffle/FTO09640.jpg",
   },
 ];
 
@@ -53,112 +53,102 @@ export default function Home() {
       <Navbar />
 
       {/* ================================================== */}
-{/* HERO SLIDESHOW */}
-{/* ================================================== */}
+      {/* HERO SLIDESHOW */}
+      {/* ================================================== */}
 
-<section className="relative h-screen min-h-[600px] overflow-hidden bg-[#081321] text-white">
-
-  {/* HERO IMAGES */}
-  {heroSlides.map((slide, index) => (
-    <div
-      key={slide.image}
-      className={`absolute inset-0 transition-opacity duration-[1400ms] ease-in-out ${
-        activeSlide === index ? "opacity-100" : "opacity-0"
-      }`}
-    >
-      <img
-        src={slide.image}
-        alt={`Neréa Blouse ${slide.color}`}
-        className={`h-full w-full object-cover transition-transform duration-[7000ms] ease-out ${
-          activeSlide === index ? "scale-[1.05]" : "scale-100"
-        }`}
-      />
-    </div>
-  ))}
-
-  {/* DARK OVERLAY */}
-  <div className="absolute inset-0 bg-black/10" />
-
-  {/* BOTTOM GRADIENT */}
-  <div className="absolute inset-0 bg-gradient-to-t from-[#081321]/80 via-transparent to-[#081321]/10" />
-
-  {/* TOP LABEL */}
-  <div className="absolute left-6 top-24 z-20 lg:left-12 lg:top-28">
-    <p className="text-[8px] uppercase tracking-[0.35em] text-white/70">
-      Collection 01
-    </p>
-
-    <p className="mt-2 font-serif text-lg tracking-[0.08em]">
-      Neréa
-    </p>
-  </div>
-
-  {/* HERO TEXT */}
-  <div className="absolute bottom-12 left-6 z-20 max-w-[650px] lg:bottom-16 lg:left-12">
-
-    <p className="text-[8px] uppercase tracking-[0.4em] text-white/60">
-      {heroSlides[activeSlide].color}
-    </p>
-
-    <h1 className="mt-4 font-serif text-4xl leading-[0.95] sm:text-5xl lg:text-7xl">
-      Elegance
-      <br />
-      <span className="italic">Born From Depth.</span>
-    </h1>
-
-    <p className="mt-5 font-serif text-xl italic text-white/80">
-      Neréa Blouse
-    </p>
-
-    <Link
-      href="/product/nerea-blouse"
-      className="mt-8 inline-block border border-white/40 px-7 py-3 text-[8px] uppercase tracking-[0.25em] text-white backdrop-blur-sm transition duration-300 hover:border-white hover:bg-white hover:text-[#102239]"
-    >
-      Discover Neréa
-    </Link>
-
-  </div>
-
-  {/* SLIDE INDICATOR */}
-  <div className="absolute bottom-12 right-6 z-20 lg:bottom-16 lg:right-12">
-
-    <div className="flex items-center gap-4">
-
-      <span className="text-[9px] tracking-[0.2em] text-white/70">
-        {String(activeSlide + 1).padStart(2, "0")}
-      </span>
-
-      <div className="flex gap-2">
-
+      <section className="relative h-screen min-h-[600px] overflow-hidden bg-[#081321] text-white">
+        {/* HERO IMAGES */}
         {heroSlides.map((slide, index) => (
-          <button
-            key={slide.color}
-            type="button"
-            aria-label={`Go to ${slide.color}`}
-            onClick={() => setActiveSlide(index)}
-            className="group flex h-5 items-center"
+          <div
+            key={slide.image}
+            className={`absolute inset-0 transition-opacity duration-[1400ms] ease-in-out ${
+              activeSlide === index ? "opacity-100" : "opacity-0"
+            }`}
           >
-            <span
-              className={`block h-px transition-all duration-500 ${
-                activeSlide === index
-                  ? "w-10 bg-white"
-                  : "w-5 bg-white/35 group-hover:bg-white/70"
+            <img
+              src={slide.image}
+              alt={`Neréa Blouse ${slide.color}`}
+              className={`h-full w-full object-cover transition-transform duration-[7000ms] ease-out ${
+                activeSlide === index ? "scale-[1.05]" : "scale-100"
               }`}
             />
-          </button>
+          </div>
         ))}
 
-      </div>
+        {/* DARK OVERLAY */}
+        <div className="absolute inset-0 bg-black/10" />
 
-      <span className="text-[9px] tracking-[0.2em] text-white/40">
-        03
-      </span>
+        {/* BOTTOM GRADIENT */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#081321]/80 via-transparent to-[#081321]/10" />
 
-    </div>
+        {/* TOP LABEL */}
+        <div className="absolute left-6 top-24 z-20 lg:left-12 lg:top-28">
+          <p className="text-[8px] uppercase tracking-[0.35em] text-white/70">
+            Collection 01
+          </p>
 
-  </div>
+          <p className="mt-2 font-serif text-lg tracking-[0.08em]">
+            Neréa
+          </p>
+        </div>
 
-</section>
+        {/* HERO TEXT */}
+        <div className="absolute bottom-12 left-6 z-20 max-w-[650px] lg:bottom-16 lg:left-12">
+          <p className="text-[8px] uppercase tracking-[0.4em] text-white/60">
+            {heroSlides[activeSlide].color}
+          </p>
+
+          <h1 className="mt-4 font-serif text-4xl leading-[0.95] sm:text-5xl lg:text-7xl">
+            Elegance
+            <br />
+            <span className="italic">Born From Depth.</span>
+          </h1>
+
+          <p className="mt-5 font-serif text-xl italic text-white/80">
+            Neréa Blouse
+          </p>
+
+          <Link
+            href="/product/nerea-blouse"
+            className="mt-8 inline-block border border-white/40 px-7 py-3 text-[8px] uppercase tracking-[0.25em] text-white backdrop-blur-sm transition duration-300 hover:border-white hover:bg-white hover:text-[#102239]"
+          >
+            Discover Neréa
+          </Link>
+        </div>
+
+        {/* SLIDE INDICATOR */}
+        <div className="absolute bottom-12 right-6 z-20 lg:bottom-16 lg:right-12">
+          <div className="flex items-center gap-4">
+            <span className="text-[9px] tracking-[0.2em] text-white/70">
+              {String(activeSlide + 1).padStart(2, "0")}
+            </span>
+
+            <div className="flex gap-2">
+              {heroSlides.map((slide, index) => (
+                <button
+                  key={slide.color}
+                  type="button"
+                  aria-label={`Go to ${slide.color}`}
+                  onClick={() => setActiveSlide(index)}
+                  className="group flex h-5 items-center"
+                >
+                  <span
+                    className={`block h-px transition-all duration-500 ${
+                      activeSlide === index
+                        ? "w-10 bg-white"
+                        : "w-5 bg-white/35 group-hover:bg-white/70"
+                    }`}
+                  />
+                </button>
+              ))}
+            </div>
+
+            <span className="text-[9px] tracking-[0.2em] text-white/40">
+              03
+            </span>
+          </div>
+        </div>
+      </section>
 
       {/* ================================================== */}
       {/* PHILOSOPHY */}
@@ -249,14 +239,14 @@ export default function Home() {
                   </div>
 
                   <div className="text-right">
-  <p className="text-[9px] tracking-wide text-white/35 line-through">
-    Rp189.000
-  </p>
+                    <p className="text-[9px] tracking-wide text-white/35 line-through">
+                      Rp189.000
+                    </p>
 
-  <p className="mt-1 text-sm tracking-wide text-white">
-    Rp169.000
-  </p>
-</div>
+                    <p className="mt-1 text-sm tracking-wide text-white">
+                      Rp169.000
+                    </p>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -526,31 +516,31 @@ export default function Home() {
           {/* STORY IMAGES */}
           <div className="relative mx-auto h-[520px] w-full max-w-[500px]">
             {/* PORCELAIN */}
-<div className="absolute left-0 top-0 h-[390px] w-[72%] overflow-hidden">
-  <img
-    src="/images/products/nerea-porcelain/FTO09606.JPG"
-    alt="ZAVÉRA Neréa Porcelain"
-    className="h-full w-full object-cover transition duration-700 hover:scale-[1.025]"
-  />
-</div>
+            <div className="absolute left-0 top-0 h-[390px] w-[72%] overflow-hidden">
+              <img
+                src="/images/products/nerea-porcelain/FTO09606.jpg"
+                alt="ZAVÉRA Neréa Porcelain"
+                className="h-full w-full object-cover transition duration-700 hover:scale-[1.025]"
+              />
+            </div>
 
-{/* POWDER BLUE */}
-<div className="absolute bottom-0 right-0 h-[250px] w-[52%] overflow-hidden border-8 border-[#E9E0D6]">
-  <img
-    src="/images/products/nerea-powder-blue/FTO09686.JPG"
-    alt="ZAVÉRA Neréa Powder Blue"
-    className="h-full w-full object-cover transition duration-700 hover:scale-[1.025]"
-  />
-</div>
+            {/* POWDER BLUE */}
+            <div className="absolute bottom-0 right-0 h-[250px] w-[52%] overflow-hidden border-8 border-[#E9E0D6]">
+              <img
+                src="/images/products/nerea-powder-blue/FTO09686.jpg"
+                alt="ZAVÉRA Neréa Powder Blue"
+                className="h-full w-full object-cover transition duration-700 hover:scale-[1.025]"
+              />
+            </div>
 
-{/* TRUFFLE */}
-<div className="absolute bottom-10 left-[10%] h-[190px] w-[37%] overflow-hidden border-8 border-[#E9E0D6]">
-  <img
-    src="/images/products/nerea-truffle/FTO09640.JPG"
-    alt="ZAVÉRA Neréa Truffle"
-    className="h-full w-full object-cover transition duration-700 hover:scale-[1.025]"
-  />
-</div>
+            {/* TRUFFLE */}
+            <div className="absolute bottom-10 left-[10%] h-[190px] w-[37%] overflow-hidden border-8 border-[#E9E0D6]">
+              <img
+                src="/images/products/nerea-truffle/FTO09640.jpg"
+                alt="ZAVÉRA Neréa Truffle"
+                className="h-full w-full object-cover transition duration-700 hover:scale-[1.025]"
+              />
+            </div>
 
             <div className="absolute -bottom-5 -left-5 h-24 w-24 border border-[#9C7A42]/40" />
           </div>
@@ -572,7 +562,9 @@ export default function Home() {
           <h2 className="mt-8 font-serif text-5xl leading-tight sm:text-6xl lg:text-8xl">
             Elegance is not
             <br />
-            <span className="italic text-[#D7B77A]">the destination.</span>
+            <span className="italic text-[#D7B77A]">
+              the destination.
+            </span>
           </h2>
 
           <p className="mx-auto mt-8 max-w-[500px] text-sm leading-8 text-white/40">
